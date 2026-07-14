@@ -10,5 +10,6 @@ class Team extends Model
 {
     use Translatable;
     protected $translatable = ['title', 'name', 'content', 'content_two'];
+    protected $fillable = ['title', 'name', 'content', 'content_two', 'photo', 'url', 'order', 'type'];
     protected $casts = ['type' => 'array'];
 }

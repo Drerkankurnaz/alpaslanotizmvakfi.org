@@ -24,25 +24,25 @@ class MentorResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
-                    ->maxLength(255),
+                    ->label('İsim')->maxLength(255),
                 Forms\Components\TextInput::make('surname')
-                    ->maxLength(255),
+                    ->label('Soyisim')->maxLength(255),
                 Forms\Components\TextInput::make('email')
-                    ->email()
+                    ->label('E-posta')->email()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('phone')
-                    ->tel()
+                    ->label('Telefon')->tel()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('school')
-                    ->maxLength(255),
+                    ->label('Okul')->maxLength(255),
                 Forms\Components\TextInput::make('collage')
-                    ->maxLength(255),
+                    ->label('Üniversite')->maxLength(255),
                 Forms\Components\TextInput::make('major')
-                    ->maxLength(255),
+                    ->label('Bölüm')->maxLength(255),
                 Forms\Components\TextInput::make('minor')
-                    ->maxLength(255),
+                    ->label('Yandal')->maxLength(255),
                 Forms\Components\TextInput::make('expertise')
-                    ->maxLength(255),
+                    ->label('Uzmanlık')->maxLength(255),
             ]);
     }
 
@@ -51,29 +51,29 @@ class MentorResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
+                    ->label('İsim')->searchable(),
                 Tables\Columns\TextColumn::make('surname')
-                    ->searchable(),
+                    ->label('Soyisim')->searchable(),
                 Tables\Columns\TextColumn::make('email')
-                    ->searchable(),
+                    ->label('E-posta')->searchable(),
                 Tables\Columns\TextColumn::make('phone')
-                    ->searchable(),
+                    ->label('Telefon')->searchable(),
                 Tables\Columns\TextColumn::make('school')
-                    ->searchable(),
+                    ->label('Okul')->searchable(),
                 Tables\Columns\TextColumn::make('collage')
-                    ->searchable(),
+                    ->label('Üniversite')->searchable(),
                 Tables\Columns\TextColumn::make('major')
-                    ->searchable(),
+                    ->label('Bölüm')->searchable(),
                 Tables\Columns\TextColumn::make('minor')
-                    ->searchable(),
+                    ->label('Yandal')->searchable(),
                 Tables\Columns\TextColumn::make('expertise')
-                    ->searchable(),
+                    ->label('Uzmanlık')->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                    ->label('Oluşturulma Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
+                    ->label('Güncellenme Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])

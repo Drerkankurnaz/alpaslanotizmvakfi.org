@@ -24,11 +24,11 @@ class SlideResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->maxLength(255),
+                    ->label('Başlık')->maxLength(255),
                 Forms\Components\TextInput::make('title_two')
-                    ->maxLength(255),
+                    ->label('İkinci Başlık')->maxLength(255),
                 Forms\Components\Textarea::make('content')
-                    ->columnSpanFull(),
+                    ->label('İçerik')->columnSpanFull(),
             ]);
     }
 
@@ -37,15 +37,15 @@ class SlideResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
+                    ->label('Başlık')->searchable(),
                 Tables\Columns\TextColumn::make('title_two')
-                    ->searchable(),
+                    ->label('İkinci Başlık')->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                    ->label('Oluşturulma Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
+                    ->label('Güncellenme Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])

@@ -10,6 +10,7 @@ class Slide extends Model
 {
     use Translatable;
     protected $translatable = ['title', 'title_two', 'content'];
+    protected $fillable = ['title', 'title_two', 'content'];
 
 
 

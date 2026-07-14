@@ -24,11 +24,11 @@ class AnnouncementResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->maxLength(255),
+                    ->label('Başlık')->maxLength(255),
                 Forms\Components\Textarea::make('content')
-                    ->columnSpanFull(),
+                    ->label('İçerik')->columnSpanFull(),
                 Forms\Components\FileUpload::make('photo')
-                    ->image()
+                    ->label('Fotoğraf')->image()
                     ->directory('announcements')
                     ->disk('public'),
                 Forms\Components\DatePicker::make('date'),
@@ -40,18 +40,18 @@ class AnnouncementResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
+                    ->label('Başlık')->searchable(),
                 Tables\Columns\TextColumn::make('photo')
-                    ->searchable(),
+                    ->label('Fotoğraf')->searchable(),
                 Tables\Columns\TextColumn::make('date')
-                    ->date()
+                    ->label('Tarih')->date()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                    ->label('Oluşturulma Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
+                    ->label('Güncellenme Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])

@@ -10,4 +10,5 @@ class School extends Model
 {
     use Translatable;
     protected $translatable = ['title', 'content', 'content_two'];
+    protected $fillable = ['title', 'content', 'content_two', 'photo'];
 }

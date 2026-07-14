@@ -10,4 +10,5 @@ class News extends Model
 {
     use Translatable;
     protected $translatable = ['title', 'content'];
+    protected $fillable = ['title', 'content', 'photo', 'date'];
 }

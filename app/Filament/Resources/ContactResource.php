@@ -24,21 +24,21 @@ class ContactResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
-                    ->maxLength(255)
+                    ->label('İsim')->maxLength(255)
                     ->disabled(),
                 Forms\Components\TextInput::make('email')
-                    ->email()
+                    ->label('E-posta')->email()
                     ->maxLength(255)
                     ->disabled(),
                 Forms\Components\TextInput::make('phone')
-                    ->tel()
+                    ->label('Telefon')->tel()
                     ->maxLength(255)
                     ->disabled(),
                 Forms\Components\Textarea::make('content')
-                    ->columnSpanFull()
+                    ->label('İçerik')->columnSpanFull()
                     ->disabled(),
                 Forms\Components\TextInput::make('type')
-                    ->maxLength(255)
+                    ->label('Tür')->maxLength(255)
                     ->disabled(),
             ]);
     }
@@ -53,19 +53,19 @@ class ContactResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
+                    ->label('İsim')->searchable(),
                 Tables\Columns\TextColumn::make('email')
-                    ->searchable(),
+                    ->label('E-posta')->searchable(),
                 Tables\Columns\TextColumn::make('phone')
-                    ->searchable(),
+                    ->label('Telefon')->searchable(),
                 Tables\Columns\TextColumn::make('type')
-                    ->searchable(),
+                    ->label('Tür')->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                    ->label('Oluşturulma Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
+                    ->label('Güncellenme Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])

@@ -24,37 +24,37 @@ class ApplicantResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
-                    ->maxLength(255),
+                    ->label('İsim')->maxLength(255),
                 Forms\Components\TextInput::make('surname')
-                    ->maxLength(255),
+                    ->label('Soyisim')->maxLength(255),
                 Forms\Components\TextInput::make('email')
-                    ->email()
+                    ->label('E-posta')->email()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('phone')
-                    ->tel()
+                    ->label('Telefon')->tel()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('high_school')
-                    ->maxLength(255),
+                    ->label('Lise')->maxLength(255),
                 Forms\Components\TextInput::make('gpa')
-                    ->maxLength(255),
+                    ->label('Not Ortalaması')->maxLength(255),
                 Forms\Components\TextInput::make('sat')
-                    ->maxLength(255),
+                    ->label('SAT')->maxLength(255),
                 Forms\Components\TextInput::make('act')
-                    ->maxLength(255),
+                    ->label('ACT')->maxLength(255),
                 Forms\Components\TextInput::make('dream_school')
-                    ->maxLength(255),
+                    ->label('Hedef Okul')->maxLength(255),
                 Forms\Components\TextInput::make('like_school_one')
-                    ->maxLength(255),
+                    ->label('Tercih 1')->maxLength(255),
                 Forms\Components\TextInput::make('like_school_two')
-                    ->maxLength(255),
+                    ->label('Tercih 2')->maxLength(255),
                 Forms\Components\TextInput::make('like_school_three')
-                    ->maxLength(255),
+                    ->label('Tercih 3')->maxLength(255),
                 Forms\Components\TextInput::make('like_school_four')
-                    ->maxLength(255),
+                    ->label('Tercih 4')->maxLength(255),
                 Forms\Components\TextInput::make('like_school_five')
-                    ->maxLength(255),
+                    ->label('Tercih 5')->maxLength(255),
                 Forms\Components\TextInput::make('interested')
-                    ->maxLength(255),
+                    ->label('İlgi Alanı')->maxLength(255),
             ]);
     }
 
@@ -63,41 +63,41 @@ class ApplicantResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
+                    ->label('İsim')->searchable(),
                 Tables\Columns\TextColumn::make('surname')
-                    ->searchable(),
+                    ->label('Soyisim')->searchable(),
                 Tables\Columns\TextColumn::make('email')
-                    ->searchable(),
+                    ->label('E-posta')->searchable(),
                 Tables\Columns\TextColumn::make('phone')
-                    ->searchable(),
+                    ->label('Telefon')->searchable(),
                 Tables\Columns\TextColumn::make('high_school')
-                    ->searchable(),
+                    ->label('Lise')->searchable(),
                 Tables\Columns\TextColumn::make('gpa')
-                    ->searchable(),
+                    ->label('Not Ortalaması')->searchable(),
                 Tables\Columns\TextColumn::make('sat')
-                    ->searchable(),
+                    ->label('SAT')->searchable(),
                 Tables\Columns\TextColumn::make('act')
-                    ->searchable(),
+                    ->label('ACT')->searchable(),
                 Tables\Columns\TextColumn::make('dream_school')
-                    ->searchable(),
+                    ->label('Hedef Okul')->searchable(),
                 Tables\Columns\TextColumn::make('like_school_one')
-                    ->searchable(),
+                    ->label('Tercih 1')->searchable(),
                 Tables\Columns\TextColumn::make('like_school_two')
-                    ->searchable(),
+                    ->label('Tercih 2')->searchable(),
                 Tables\Columns\TextColumn::make('like_school_three')
-                    ->searchable(),
+                    ->label('Tercih 3')->searchable(),
                 Tables\Columns\TextColumn::make('like_school_four')
-                    ->searchable(),
+                    ->label('Tercih 4')->searchable(),
                 Tables\Columns\TextColumn::make('like_school_five')
-                    ->searchable(),
+                    ->label('Tercih 5')->searchable(),
                 Tables\Columns\TextColumn::make('interested')
-                    ->searchable(),
+                    ->label('İlgi Alanı')->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                    ->label('Oluşturulma Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
+                    ->label('Güncellenme Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])

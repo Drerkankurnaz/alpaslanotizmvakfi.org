@@ -12,4 +12,5 @@ class Research extends Model
     protected $table = 'researches';
 
     protected $translatable = ['title', 'content'];
+    protected $fillable = ['title', 'content', 'photo'];
 }

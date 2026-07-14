@@ -24,24 +24,24 @@ class TeamResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->maxLength(255),
+                    ->label('Başlık')->maxLength(255),
                 Forms\Components\TextInput::make('name')
-                    ->maxLength(255),
+                    ->label('İsim')->maxLength(255),
                 Forms\Components\Textarea::make('content')
-                    ->columnSpanFull(),
+                    ->label('İçerik')->columnSpanFull(),
                 Forms\Components\Textarea::make('content_two')
-                    ->columnSpanFull(),
+                    ->label('İçerik (2)')->columnSpanFull(),
                 Forms\Components\FileUpload::make('photo')
-                    ->image()
+                    ->label('Fotoğraf')->image()
                     ->directory('teams')
                     ->disk('public'),
                 Forms\Components\TextInput::make('url')
-                    ->maxLength(255),
+                    ->label('Bağlantı')->maxLength(255),
                 Forms\Components\TextInput::make('order')
-                    ->numeric()
+                    ->label('Sıra')->numeric()
                     ->default(0),
                 Forms\Components\CheckboxList::make('type')
-                    ->options([
+                    ->label('Tür')->options([
                         '1' => 'Yönetim Kurulu',
                         '2' => 'Bilim Kurulu',
                         '3' => 'Eğitim Kadrosu',
@@ -55,22 +55,22 @@ class TeamResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
+                    ->label('Başlık')->searchable(),
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
+                    ->label('İsim')->searchable(),
                 Tables\Columns\TextColumn::make('photo')
-                    ->searchable(),
+                    ->label('Fotoğraf')->searchable(),
                 Tables\Columns\TextColumn::make('url')
-                    ->searchable(),
+                    ->label('Bağlantı')->searchable(),
                 Tables\Columns\TextColumn::make('order')
-                    ->numeric()
+                    ->label('Sıra')->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                    ->label('Oluşturulma Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
+                    ->label('Güncellenme Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
