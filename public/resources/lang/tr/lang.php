@@ -1,0 +1,113 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Kimlik Doğrulama Dil Satırları
+    |--------------------------------------------------------------------------
+    |
+    | Aşağıdaki dil satırları, kullanıcılara göstermemiz gereken çeşitli
+    | mesajlar için kimlik doğrulama sırasında kullanılır. Bu dil satırlarını
+    | uygulamanızın gereksinimlerine göre değiştirmekte özgürsünüz.
+    |
+    */
+
+    'welcome' => 'Hoşgeldiniz',
+    'password' => 'Sağlanan şifre yanlış.',
+    'throttle' => 'Çok fazla giriş denemesi. Lütfen :seconds saniye sonra tekrar deneyin.',
+    'bize_ulasin' => 'Bize Ulaşın',
+    'english' => 'İngilizce',
+    'turkish' => 'Türkçe',
+    'ana_sayfa' => 'Ana Sayfa',
+    'hakkimizda' => 'Hakkımızda',
+    'hikayemiz' => 'Hikayemiz',
+    'yonetim' => 'Yönetim',
+    'vakif_bilim_kurulu' => 'Vakıf Bilim Kurulu',
+    'vizyon' => 'Vizyon',
+    'misyon' => 'Misyon',
+    'temel_degerler' => 'Temel Değerler',
+    'ilkeler' => 'İlkeler',
+    'kalite_cevre_is_sagligi_ve_guvenlik_politikasi' => 'Kalite, Çevre, İş Sağlığı ve Güvenlik Politikası',
+    'kisisel_verileri_koruma_kanunu' => 'Kişisel Verileri Koruma Kanunu',
+    'otizm_spektrum_bozuklugu' => 'Otizm Spektrum Bozukluğu',
+    'otizm_spektrum_bozuklugu_nedir' => 'Otizm Spektrum Bozukluğu Nedir?',
+    'otizm_spektrum_bozuklugu_belirtileri_nedir' => 'Otizm Spektrum Bozukluğu Belirtileri Nelerdir?',
+    'otizm_spektrum_bozuklugu_nedenleri' => 'Otizm Spektrum Bozukluğunun Nedenleri',
+    'istatistik' => 'İstatistikler',
+    'bilimsel_kaynakli_uygulamalar' => 'Bilimsel Dayanaklı Uygulamalar',
+    'uzmanlar_icin_egitim_icerikleri' => 'Uzmanlar İçin Eğitim İçerikleri',
+    'aileler_icin_egitim_icerikleri' => 'Aileler İçin Eğitim İçerikleri',
+    'hizmetlerimiz' => 'Hizmetlerimiz',
+    'hizmetSubTitle' => 'Alpaslan Otizm Vakfı, otizm spektrumu bozukluğunda yenilikçi yaklaşımlar sunarak bireylerin potansiyellerini ortaya çıkarır ve yaşam kalitelerini artırır. Özel eğitimlerimiz, her bireyin potansiyelini en üst seviyede kullanabilmesine destek olur.',
+    'okulumuz' => 'Okulumuz',
+    'aov_de_uygulanan_egitimler' => "AOV'de Uygulanan Eğitimler",
+    'etkinliklerimiz' => 'Etkinliklerimiz',
+    'egitim_kadromuz' => 'Eğitim Kadromuz',
+    'idari_kadromuz' => 'İdari Kadromuz',
+    'yayinlarimiz' => 'Yayınlarımız',
+    'okulumuz_sanal_gezinti' => 'Okulumuz Sanal Gezinti',
+    'kuruluslarimiz' => 'Kuruluşlarımız',
+    'alpaslan_ozel_egitim_ve_rehabilitasyon_merkezi' => 'Alpaslan Özel Eğitim ve Rehabilitasyon Merkezi',
+    'alpaslan_otizm_vakfi_yayinlari' => 'Alpaslan Otizm Vakfı Yayınları',
+    'alpaslan_egitim_ve_danismanlik_as' => 'Alpaslan Eğitim ve Danışmanlık A.Ş.',
+    'kariyer' => 'Kariyer',
+    'iletisim' => 'İletişim',
+    'alpaslan_vakif' => 'Alpaslan Otizm Vakfı',
+    'alpaslan_vakif_content' => 'Alpaslan Otizm Vakfı, otizm spektrum bozukluğundan etkilenen bireylere, ailelerine ve ilgili paydaşlara yönelik, yenilikçi ve bilgi-iletişim teknolojileri tabanlı disiplinlerarası hizmetler sunarak ulusal ve uluslararası düzeyde model bir vakıf olmayı amaçlamaktadır.',
+    'bilimsel_arastırma' => 'Bilimsel Araştırma',
+    'ogrenci' => 'Öğrenci',
+    'kaynak_kitap' => 'Kaynak Kitap',
+    'seminer' => 'Seminer',
+    'hp_title_one' => 'Umut Veren Gelecek',
+    'hp_content_one' => 'Alpaslan Otizm Vakfı, otizm spektrumunda yer alan bireylere destek sağlayarak, onların geleceği için umut veriyor.',
+    'hp_title_two' => 'Farkındalığı Yükselt',
+    'hp_content_two' => 'Alpaslan Otizm Vakfı, otizm spektrumunda yer alan bireylere yönelik farkındalığı arttırarak destek sağlıyor.',
+    'neden_alpaslan' => 'Neden Alpaslan Otizm Vakfı?',
+    'neden_alpaslan_content' => '“Alpaslan Otizm: Otizm Spektrumu Bozukluğunda Yenilikçi Yaklaşımlar”
+                                Alpaslan Otizm Vakfı, otizm spektrumunda yer alan bireylere, ailelerine ve ilgili paydaşlara yönelik yenilikçi yaklaşımlar sunarak, ulusal ve uluslararası düzeyde model bir vakıf olarak öne çıkıyor. Mustafa Alpaslan ve ekibi, Sapanca’daki aktif otizm merkezini devralarak, kaliteli ve disiplinlerarası hizmetler sunan bir vakıf kurmaya karar verdiler. Alpaslan Otizm Vakfı, bilgi-iletişim teknolojileri tabanlı hizmetleriyle otizm spektrumunda yer alan bireylere, ailelerine ve ilgili paydaşlara özgün ve özel bir eğitim sunuyor.
+                                Alpaslan Otizm Vakfı’nın hedefi, otizm spektrumunda yer alan bireylerin hayatlarına dokunarak, yaşamlarını olumlu yönde değiştirmek. İnovatif yaklaşımlarıyla dikkat çeken vakıf, ulusal ve uluslararası alanda model bir vakıf olmayı hedefliyor. Alpaslan Otizm Vakfı, kendini sürekli geliştiren ve en son teknolojileri kullanarak bireylerin eğitimine katkı sağlamayı amaçlayan bir vakıf olarak öne çıkıyor.
+                                Alpaslan Otizm Vakfı, otizm spektrumu bozukluğunda yenilikçi yaklaşımlarıyla fark yaratıyor"',
+    'bilimsel' => 'Bilimsel',
+    'evrensel' => 'Evrensel',
+    'veriye_dayali' => 'Veriye Dayalı',
+    'disiplinler_arasi' => 'Disiplinler arası',
+    'aile_merkezli' => 'Aile Merkezli',
+    'yenilikçi' => 'Yenilikçi',
+    'iletisim_formu' => 'İletişim Formu',
+    'birlikte_gelisiyoruz' => 'Birlikte Gelişiyoruz',
+    'isim_soyisim' => 'İsim Soyisim',
+    'eposta' => 'E-Posta',
+    'telefon' => 'Telefon',
+    'mobil_telefon' => 'Telefon',
+    'mesaj' => 'Mesaj',
+    'gonder' => 'Gönder',
+    'hizli_menu' => 'Hızlı Menü',
+    'yonetim_kurulu' => 'Yönetim Kurulu',
+    'yonetim_kurulu_baskanı' => 'Yönetim Kurulu Başkanı',
+    'otizm_vakfi' => 'Otizm Vakfı',
+    'yonetim_kurulu_uyesi' => 'Yönetim Kurulu Üyesi',
+    'detay' => 'Detay',
+    'bilim_kurulu' => 'Bilim Kurulu',
+    '1_title' => 'Otizmle Yolculuk',
+    '1_content' => 'Alpaslan Otizm Vakfı, otizm spektrumunda yer alan bireylerin eğitiminde hakiki bir yolculuk sunuyor',
+    '2_title' => 'Farkındalığı Yükselt',
+    '2_content' => 'Alpaslan Otizm Vakfı, otizm spektrumunda yer alan bireylere yönelik farkındalığı arttırarak destek sağlıyor.',
+    '3_title' => 'Güçlü Birliktelik',
+    '3_content' => 'Alpaslan Otizm Vakfı, otizm spektrumunda yer alan bireyler ve aileleri ile güçlü bir ekip olarak çalışarak, başarıya giden yolda birlikte ilerliyor.',
+    'kariyer_formu' => 'Kariyer Formu',
+    'kariyer_aciklama' => 'Alpaslan Otizm Vakfı bilimsel çalışmalara önem veren, etkin iletişim yöntemlerini kullanan, şeffaf, katılımcı, katma değer yaratan, paylaşımcı, karşılıklı güven ve iş birliğine dayalı bir yaklaşım sergilemektedir. Ekibimizin bir parçası olmak isterseniz aşağıdaki adreslere özgeçmişinizi gönderebilirsiniz',
+    'tasarım_programlama' => 'Tasarım ve Programlama:',
+    'hak' => '2023 Tüm hakları saklıdır. ',
+    'arastırmalar' => 'Araştırmalar',
+    'duyurular' => 'Duyurular',
+    'ara' => 'Arama Yap',
+    'haberler' => 'Bizden Haberler',
+    'son_etkinlik' => 'Son Etkinliklerimiz',
+    'aov_yayinevi' => 'AOV Yayınevi',
+
+    'adres_c' => 'Adres : Hasan Paşa Mah. Fatih Cad. No: 31 Kırkpınar / Sapanca / SAKARYA',
+    'etiketler' => 'Etiketler',
+    'ozgecmis' => 'Özgeçmiş',
+
+];
