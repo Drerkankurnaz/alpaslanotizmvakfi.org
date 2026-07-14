@@ -19,6 +19,16 @@ class DocumentResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getModelLabel(): string
+    {
+        return 'Belge';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Belgeler';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

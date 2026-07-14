@@ -19,6 +19,16 @@ class AnnouncementResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getModelLabel(): string
+    {
+        return 'Duyuru';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Duyurular';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

@@ -19,6 +19,16 @@ class ActivityResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getModelLabel(): string
+    {
+        return 'Etkinlik';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Etkinlikler';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

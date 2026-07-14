@@ -19,6 +19,16 @@ class ApplicantResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getModelLabel(): string
+    {
+        return 'Başvuru';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Başvurular';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

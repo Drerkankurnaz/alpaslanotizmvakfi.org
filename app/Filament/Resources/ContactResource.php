@@ -19,6 +19,16 @@ class ContactResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getModelLabel(): string
+    {
+        return 'İletişim Mesajı';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'İletişim Mesajları';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

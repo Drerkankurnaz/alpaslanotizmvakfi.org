@@ -19,6 +19,16 @@ class TeamResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getModelLabel(): string
+    {
+        return 'Ekip Üyesi';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Ekip Üyeleri';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

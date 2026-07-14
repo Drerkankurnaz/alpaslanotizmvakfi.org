@@ -19,6 +19,16 @@ class SlideResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getModelLabel(): string
+    {
+        return 'Slayt';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Slaytlar';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

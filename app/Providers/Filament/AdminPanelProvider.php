@@ -27,9 +27,13 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->brandName('Alpaslan Otizm Vakfı')
+            ->brandLogo(asset('assets/images/alpaslan-logo-3.png'))
+            ->brandLogoHeight('3rem')
+            ->favicon(asset('assets/images/vakiflogo2.png'))
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Sky,
+                'danger' => Color::Rose,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')

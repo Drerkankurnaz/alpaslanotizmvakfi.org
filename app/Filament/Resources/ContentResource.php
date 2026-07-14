@@ -19,6 +19,16 @@ class ContentResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getModelLabel(): string
+    {
+        return 'Eğitim İçeriği';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Eğitim İçerikleri';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

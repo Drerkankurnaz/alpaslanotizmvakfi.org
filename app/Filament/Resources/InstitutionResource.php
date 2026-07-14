@@ -19,6 +19,16 @@ class InstitutionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getModelLabel(): string
+    {
+        return 'Kurum';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Kurumlar';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

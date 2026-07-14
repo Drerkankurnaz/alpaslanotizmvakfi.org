@@ -19,6 +19,16 @@ class AutismResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getModelLabel(): string
+    {
+        return 'Otizm İçeriği';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Otizm İçerikleri';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

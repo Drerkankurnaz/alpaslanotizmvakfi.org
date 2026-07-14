@@ -19,6 +19,16 @@ class AboutResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getModelLabel(): string
+    {
+        return 'Hakkımızda Kaydı';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Hakkımızda';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

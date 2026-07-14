@@ -19,6 +19,16 @@ class ResearchResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getModelLabel(): string
+    {
+        return 'Araştırma';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Araştırmalar';
+    }
+
     public static function form(Form $form): Form
     {
         return $form
