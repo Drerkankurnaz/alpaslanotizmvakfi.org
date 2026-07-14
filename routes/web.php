@@ -146,8 +146,4 @@ Route::post('mentor_form', function (\Illuminate\Http\Request $request){
 Route::get('/match_mentor', [SiteController::class, 'match_mentor'])->name('match_mentor');
 
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
-
 ?>
