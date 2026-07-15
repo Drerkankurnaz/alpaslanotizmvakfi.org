@@ -98,7 +98,7 @@ return [
     'kariyer_formu' => 'Kariyer Formu',
     'kariyer_aciklama' => 'Alpaslan Otizm Vakfı bilimsel çalışmalara önem veren, etkin iletişim yöntemlerini kullanan, şeffaf, katılımcı, katma değer yaratan, paylaşımcı, karşılıklı güven ve iş birliğine dayalı bir yaklaşım sergilemektedir. Ekibimizin bir parçası olmak isterseniz aşağıdaki adreslere özgeçmişinizi gönderebilirsiniz',
     'tasarım_programlama' => 'Tasarım ve Programlama:',
-    'hak' => '2023 Tüm hakları saklıdır. ',
+    'hak' => '2026 Tüm hakları saklıdır. ',
     'arastırmalar' => 'Araştırmalar',
     'duyurular' => 'Duyurular',
     'ara' => 'Arama Yap',

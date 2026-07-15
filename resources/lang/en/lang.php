@@ -96,7 +96,7 @@ return [
     'kariyer_formu' => 'Career Form',
     'kariyer_aciklama' => 'Alpaslan Autism Foundation employs a transparent, participatory approach based on sharing, mutual trust and cooperation and which attaches importance to scientific studies, uses effective communication methods, and creates added value. If you would like to be part of our team, you can send your resume to the following addresses:',
     'tasarım_programlama' => 'Design and Programming:',
-    'hak' => '2023 All rights reserved. ',
+    'hak' => '2026 All rights reserved. ',
     'arastırmalar' => 'Researches',
     'duyurular' => 'Announcements',
     'ara' => 'Search...',
