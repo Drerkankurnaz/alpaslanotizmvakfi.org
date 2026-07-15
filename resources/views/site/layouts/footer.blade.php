@@ -59,7 +59,7 @@
         <div class="container">
             <div class="footer_copyright_wrapper text-center d-md-flex justify-content-between">
                 <div class="copyright">
-                    <p>{{__('lang.tasarım_programlama')}} E-DMS STUDIO</p>
+                    <p>{{__('lang.tasarım_programlama')}} Otimeta</p>
                 </div>
                 <div class="copyright">
                     <p> {{__('lang.hak')}}</p>
