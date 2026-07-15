@@ -9,13 +9,13 @@ services:
     volumes:
       - .:/var/www/html
     environment:
-      APP_URL: http://localhost:8083
+      APP_URL: ${APP_URL}
       DB_CONNECTION: mysql
       DB_HOST: db
       DB_PORT: 3306
-      DB_DATABASE: alpaslanotizmvakfi
-      DB_USERNAME: alpaslan
-      DB_PASSWORD: REDACTED_LOCAL_SECRET
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
     depends_on:
       - db
     networks:
@@ -40,10 +40,10 @@ services:
     container_name: alpaslan_db
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: alpaslanotizmvakfi
-      MYSQL_USER: alpaslan
-      MYSQL_PASSWORD: REDACTED_LOCAL_SECRET
-      MYSQL_ROOT_PASSWORD: REDACTED_ROOT_SECRET
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     ports:
       - "33061:3306"
     volumes:
