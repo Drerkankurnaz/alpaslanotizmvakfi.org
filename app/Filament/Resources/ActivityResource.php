@@ -42,6 +42,9 @@ class ActivityResource extends Resource
                 Forms\Components\FileUpload::make('photo')
                     ->label('Fotoğraf')->image()
                     ->directory('activities')
+                    ->imageResizeMode('cover')
+                    ->imageResizeTargetWidth('1200')
+                    ->imageResizeTargetHeight('900')
                     ->disk('public'),
                 Forms\Components\DatePicker::make('date'),
             ]);

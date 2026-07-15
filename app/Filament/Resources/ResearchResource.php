@@ -40,6 +40,9 @@ class ResearchResource extends Resource
                 Forms\Components\FileUpload::make('photo')
                     ->label('Fotoğraf')->image()
                     ->directory('researches')
+                    ->imageResizeMode('cover')
+                    ->imageResizeTargetWidth('1200')
+                    ->imageResizeTargetHeight('900')
                     ->disk('public'),
             ]);
     }

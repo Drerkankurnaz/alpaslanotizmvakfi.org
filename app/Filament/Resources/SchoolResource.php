@@ -42,6 +42,9 @@ class SchoolResource extends Resource
                 Forms\Components\FileUpload::make('photo')
                     ->label('Fotoğraf')->image()
                     ->directory('schools')
+                    ->imageResizeMode('cover')
+                    ->imageResizeTargetWidth('1200')
+                    ->imageResizeTargetHeight('900')
                     ->disk('public'),
             ]);
     }

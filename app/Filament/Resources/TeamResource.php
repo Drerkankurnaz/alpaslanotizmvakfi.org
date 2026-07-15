@@ -44,6 +44,9 @@ class TeamResource extends Resource
                 Forms\Components\FileUpload::make('photo')
                     ->label('Fotoğraf')->image()
                     ->directory('teams')
+                    ->imageResizeMode('cover')
+                    ->imageResizeTargetWidth('900')
+                    ->imageResizeTargetHeight('1200')
                     ->disk('public'),
                 Forms\Components\TextInput::make('url')
                     ->label('Bağlantı')->maxLength(255),
