@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Pages\Auth\Login;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -30,7 +31,7 @@ class AdminPanelProvider extends PanelProvider
             ->brandLogo(asset('assets/images/alpaslan-logo-3.png'))
             ->brandLogoHeight('3rem')
             ->favicon(asset('assets/images/vakiflogo2.png'))
-            ->login()
+            ->login(Login::class)
             ->colors([
                 'primary' => Color::Sky,
                 'danger' => Color::Rose,
