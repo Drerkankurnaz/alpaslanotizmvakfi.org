@@ -1,18 +1,16 @@
 <div class="fixed inset-0 z-[60] flex min-h-screen w-full bg-[#0d1526]">
         {{-- Left visual panel --}}
-        <div class="relative hidden w-1/2 flex-col justify-between overflow-hidden p-10 lg:flex"
+        <div class="relative hidden w-1/2 flex-col items-center justify-center overflow-hidden p-10 text-center lg:flex"
              style="background: radial-gradient(circle at 20% 20%, #38bdf8 0%, transparent 45%), radial-gradient(circle at 80% 80%, #fb7185 0%, transparent 45%), linear-gradient(160deg, #0c1a2b 0%, #10213a 55%, #16233b 100%);">
-            <div class="flex items-center justify-between">
-                <img src="{{ asset('assets/images/alpaslan-logo-3.png') }}" alt="Alpaslan Otizm Vakfı" class="h-9 w-auto">
-                <a href="{{ url('/') }}" class="rounded-full bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur transition hover:bg-white/20">
-                    ← Siteye dön
-                </a>
-            </div>
-            <div class="max-w-md">
-                <h2 class="text-3xl font-semibold leading-tight text-white">
+            <a href="{{ url('/') }}" class="absolute right-10 top-10 rounded-full bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur transition hover:bg-white/20">
+                ← Siteye dön
+            </a>
+            <div class="flex max-w-lg flex-col items-center">
+                <img src="{{ asset('assets/images/alpaslan-logo-3.png') }}" alt="Alpaslan Otizm Vakfı" class="h-24 w-auto lg:h-28">
+                <h2 class="mt-10 text-4xl font-semibold leading-tight text-white lg:text-5xl">
                     Otizmli bireylerin hayatına<br>dokunuyoruz.
                 </h2>
-                <p class="mt-4 text-white/60">
+                <p class="mt-6 text-lg text-white/60">
                     Alpaslan Otizm Vakfı içerik yönetim paneline hoş geldiniz.
                 </p>
             </div>
