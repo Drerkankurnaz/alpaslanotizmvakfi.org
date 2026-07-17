@@ -1,6 +1,41 @@
 @extends('site.layouts.master')
 
 @section('maincontent')
+    <div id="av-splash">
+        <img src="{{ asset('assets/images/alpaslan-logo-3.png') }}" alt="Alpaslan Otizm Vakfı" class="av-splash-logo">
+        <style>
+            #av-splash {
+                position: fixed; inset: 0; z-index: 99999;
+                display: flex; align-items: center; justify-content: center;
+                background: radial-gradient(circle at 20% 20%, rgba(56,189,248,0.35) 0%, transparent 45%),
+                            radial-gradient(circle at 80% 80%, rgba(251,113,133,0.35) 0%, transparent 45%),
+                            linear-gradient(160deg, #0c1a2b 0%, #10213a 55%, #16233b 100%);
+                transition: opacity .6s ease;
+            }
+            #av-splash.av-hide { opacity: 0; pointer-events: none; }
+            .av-splash-logo {
+                height: 110px; width: auto;
+                animation: avSplashIn 1.1s ease both;
+                filter: drop-shadow(0 0 24px rgba(56,189,248,0.45));
+            }
+            @keyframes avSplashIn {
+                0% { opacity: 0; transform: scale(.55); }
+                60% { opacity: 1; transform: scale(1.06); }
+                100% { opacity: 1; transform: scale(1); }
+            }
+        </style>
+        <script>
+            (function () {
+                var s = document.getElementById('av-splash');
+                if (sessionStorage.getItem('avSplashShown')) { s.parentNode.removeChild(s); return; }
+                sessionStorage.setItem('avSplashShown', '1');
+                setTimeout(function () {
+                    s.classList.add('av-hide');
+                    setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 700);
+                }, 1500);
+            })();
+        </script>
+    </div>
     <section class="slider_area slider-active">
         @foreach($slides as $slide)
             <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url({{asset('assets/images/slide/slide-1.jpg')}})">
