@@ -1,0 +1,64 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: alpaslan_app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - alpaslan
+
+  webserver:
+    image: nginx:stable-alpine
+    container_name: alpaslan_nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - .:/var/www/html
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d:ro
+      - certbot_www:/var/www/certbot
+      - certbot_certs:/etc/letsencrypt:ro
+    depends_on:
+      - app
+    networks:
+      - alpaslan
+
+  db:
+    image: mysql:8.0
+    container_name: alpaslan_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - alpaslan_db_data:/var/lib/mysql
+    networks:
+      - alpaslan
+
+  certbot:
+    image: certbot/certbot
+    container_name: alpaslan_certbot
+    volumes:
+      - certbot_www:/var/www/certbot
+      - certbot_certs:/etc/letsencrypt
+    entrypoint: ["/bin/sh", "-c", "trap exit TERM; while :; do certbot renew --webroot -w /var/www/certbot --quiet; sleep 12h & wait $${!}; done"]
+    networks:
+      - alpaslan
+
+networks:
+  alpaslan:
+    driver: bridge
+
+volumes:
+  alpaslan_db_data:
+  certbot_www:
+  certbot_certs:
