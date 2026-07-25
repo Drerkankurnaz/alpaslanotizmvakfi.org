@@ -16,4 +16,5 @@ yarn-error.log
 
 .env.docker
 .env.docker.prod
+*.sql
 .DS_Store
