@@ -103,6 +103,15 @@
                         </li>
                         
                         <li>
+                            <a href="javascript:;">{{ __('lang.ogrenci_basvurusu') }} <i class="fa fa-chevron-down"></i></a>
+
+                            <ul class="sub-menu">
+                                <li><a href="{{route('scholarshipApplication.domestic')}}">{{ __('lang.yurt_ici_basvuru') }}</a></li>
+                                <li><a href="{{route('scholarshipApplication.international')}}">{{ __('lang.yurt_disi_basvuru') }}</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
                             <a href="{{route('duyurular')}}">{{ __('lang.duyurular') }}</a>
                         </li>
                         <!--====== Blog List Page PART START

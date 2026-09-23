@@ -110,4 +110,8 @@ return [
     'etiketler' => 'Etiketler',
     'ozgecmis' => 'Özgeçmiş',
 
+    'ogrenci_basvurusu' => 'Öğrenci Başvurusu',
+    'yurt_ici_basvuru' => 'Yurt İçi Öğrenci Başvurusu',
+    'yurt_disi_basvuru' => 'Yurt Dışı Öğrenci Başvurusu',
+
 ];

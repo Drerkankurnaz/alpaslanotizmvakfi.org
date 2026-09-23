@@ -42,6 +42,12 @@ return [
             'visibility' => 'public',
         ],
 
+        'scholarship_documents' => [
+            'driver' => 'local',
+            'root' => storage_path('app/scholarship-documents'),
+            'visibility' => 'private',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

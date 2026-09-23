@@ -108,6 +108,9 @@ return [
     'etiketler' => 'Labels',
     'ozgecmis' => 'CV',
 
+    'ogrenci_basvurusu' => 'Student Application',
+    'yurt_ici_basvuru' => 'Domestic Student Application',
+    'yurt_disi_basvuru' => 'International Student Application',
 
 
 

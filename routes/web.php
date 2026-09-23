@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\ScholarshipApplicationController;
+use App\Http\Controllers\Admin\ScholarshipDocumentDownloadController;
 use Illuminate\Support\Facades\Storage;
 
 // Kariyer başvuru route'u
@@ -51,6 +53,20 @@ Route::get('/uzmanlar-icin-egitim/{educationId}', [SiteController::class, 'uzman
 Route::get('/aileler-icin-egitimler', [SiteController::class, 'aileleregitimler'])->name('aileleregitimler');
 Route::get('/aileler-icin-egitim/{parentId}', [SiteController::class, 'aileleregitim'])->name('aileleregitim');
 Route::post('/iletisim-kaydet', [SiteController::class, 'contactStore'])->name('contactStore');
+
+// Öğrenci Başvurusu (Burs)
+Route::get('/ogrenci-basvurusu', [ScholarshipApplicationController::class, 'index'])->name('scholarshipApplication.index');
+Route::get('/ogrenci-basvurusu/yurt-ici', [ScholarshipApplicationController::class, 'domesticForm'])->name('scholarshipApplication.domestic');
+Route::post('/ogrenci-basvurusu/yurt-ici', [ScholarshipApplicationController::class, 'storeDomestic'])->name('scholarshipApplication.domestic.store');
+Route::get('/ogrenci-basvurusu/yurt-disi', [ScholarshipApplicationController::class, 'internationalForm'])->name('scholarshipApplication.international');
+Route::post('/ogrenci-basvurusu/yurt-disi', [ScholarshipApplicationController::class, 'storeInternational'])->name('scholarshipApplication.international.store');
+Route::get('/ogrenci-basvurusu/tesekkurler', [ScholarshipApplicationController::class, 'success'])->name('scholarshipApplication.success');
+
+Route::get('/login', fn () => redirect()->route('filament.admin.auth.login'))->name('login');
+
+Route::get('/admin/scholarship-documents/{document}/download', [ScholarshipDocumentDownloadController::class, 'download'])
+    ->middleware(['auth'])
+    ->name('admin.scholarship-documents.download');
 Route::get('/hizmetler', [SiteController::class, 'hizmetler'])->name('hizmetler');
 Route::get('/hizmet/{serviceId}', [SiteController::class, 'hizmet'])->name('hizmet');
 Route::get('/arastırmalar', [SiteController::class, 'arastırmalar'])->name('arastırmalar');

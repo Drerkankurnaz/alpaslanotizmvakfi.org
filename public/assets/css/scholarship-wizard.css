@@ -1,0 +1,79 @@
+.wizard-progress {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px;
+    justify-content: space-between;
+}
+
+.wizard-progress li {
+    flex: 1;
+    text-align: center;
+    padding: 12px 8px;
+    border-bottom: 3px solid #e2e2e2;
+    color: #999;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.wizard-progress li.active {
+    border-bottom-color: #f39c12;
+    color: #222;
+}
+
+.wizard-step {
+    display: none;
+}
+
+.wizard-step.active {
+    display: block;
+}
+
+.wizard-step h4 {
+    margin-bottom: 25px;
+}
+
+.wizard-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.char-counter {
+    display: block;
+    text-align: right;
+    color: #999;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.summary-box {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.summary-box dl {
+    margin: 0;
+}
+
+.summary-box dt {
+    font-weight: 600;
+    color: #555;
+    margin-top: 10px;
+}
+
+.summary-box dd {
+    margin-left: 0;
+    color: #222;
+}
+
+.consent-box {
+    margin: 20px 0;
+}
+
+.consent-box label {
+    font-weight: normal;
+    cursor: pointer;
+}
