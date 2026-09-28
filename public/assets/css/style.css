@@ -427,6 +427,16 @@ p {
     color: #fff;
 }
 
+.header_top_login ul li a.main-btn.btn-burs {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.header_top_login ul li a.main-btn.btn-burs:hover {
+    background-color: #1e7e34;
+    color: #fff;
+}
+
 
 
 /*===== Headr Menu =====*/

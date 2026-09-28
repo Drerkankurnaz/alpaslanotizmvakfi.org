@@ -6,10 +6,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner_content text-center">
-                        <h4 class="title">Öğrenci Başvurusu</h4>
+                        <h4 class="title">{{ __('lang.burs_basvurusu') }}</h4>
                         <ul class="breadcrumb justify-content-center">
                             <li><a href="{{'/'}}">Ana Sayfa</a></li>
-                            <li><a class="active" href="#">Öğrenci Başvurusu</a></li>
+                            <li><a class="active" href="#">{{ __('lang.burs_basvurusu') }}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -30,14 +30,14 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 mb-4">
                     <div class="single_form text-center p-40" style="border:1px solid #eee; border-radius:8px; height:100%;">
-                        <h4 class="mb-20">Yurt İçi Öğrenci Başvurusu</h4>
+                        <h4 class="mb-20">{{ __('lang.yurt_ici_burslar') }}</h4>
                         <p>Türkiye'de öğrenim gören lise, lisans veya lisansüstü öğrencileri için burs başvurusu.</p>
                         <a href="{{ route('scholarshipApplication.domestic') }}" class="main-btn mt-20">Başvuruya Başla</a>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="single_form text-center p-40" style="border:1px solid #eee; border-radius:8px; height:100%;">
-                        <h4 class="mb-20">Yurt Dışı Öğrenci Başvurusu</h4>
+                        <h4 class="mb-20">{{ __('lang.yurt_disi_burslar') }}</h4>
                         <p>Yurt dışında öğrenim gören/görecek öğrenciler, değişim programı ve dil/hazırlık desteği başvuruları.</p>
                         <a href="{{ route('scholarshipApplication.international') }}" class="main-btn mt-20">Başvuruya Başla</a>
                     </div>

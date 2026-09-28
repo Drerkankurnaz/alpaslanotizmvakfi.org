@@ -114,4 +114,8 @@ return [
 
 
 
+    'burs_basvurusu' => 'Scholarship Application',
+    'yurt_ici_burslar' => 'Domestic Scholarships',
+    'yurt_disi_burslar' => 'International Scholarships',
+
 ];

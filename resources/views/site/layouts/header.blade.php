@@ -10,6 +10,7 @@
                 </div>
                 <div class="header_top_login">
                     <ul>
+                        <li><a class="main-btn btn-burs" href="{{ route('scholarshipApplication.index') }}"><i class="fa fa-graduation-cap"></i>{{ __('lang.burs_basvurusu') }}</a></li>
                         <li><a class="main-btn" href="{{route('iletisim')}}"><i class="fa fa-user-o"></i>{{ __('lang.bize_ulasin') }}</a></li>
                         <li><a href="{{ route('lang.switch', 'en') }}">{{ __('lang.english') }}</a></li>
                         <li><a href="{{ route('lang.switch', 'tr') }}">{{ __('lang.turkish') }}</a></li>
@@ -102,15 +103,6 @@
                             </ul>
                         </li>
                         
-                        <li>
-                            <a href="javascript:;">{{ __('lang.ogrenci_basvurusu') }} <i class="fa fa-chevron-down"></i></a>
-
-                            <ul class="sub-menu">
-                                <li><a href="{{route('scholarshipApplication.domestic')}}">{{ __('lang.yurt_ici_basvuru') }}</a></li>
-                                <li><a href="{{route('scholarshipApplication.international')}}">{{ __('lang.yurt_disi_basvuru') }}</a></li>
-                            </ul>
-                        </li>
-
                         <li>
                             <a href="{{route('duyurular')}}">{{ __('lang.duyurular') }}</a>
                         </li>

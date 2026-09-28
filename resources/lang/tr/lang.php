@@ -114,4 +114,8 @@ return [
     'yurt_ici_basvuru' => 'Yurt İçi Öğrenci Başvurusu',
     'yurt_disi_basvuru' => 'Yurt Dışı Öğrenci Başvurusu',
 
+    'burs_basvurusu' => 'Burs Başvurusu',
+    'yurt_ici_burslar' => 'Yurt İçi Burslar',
+    'yurt_disi_burslar' => 'Yurt Dışı Burslar',
+
 ];
