@@ -165,12 +165,21 @@ class ScholarshipApplicationController extends Controller
         }
     }
 
+    // Başvuru kaydedildikten sonra mail hatası kullanıcıya yansıtılmaz; yalnızca loglanır.
     private function sendNotifications(ScholarshipApplication $application): void
     {
-        Mail::to('info@alpaslanotizmvakfi.org')->send(new ScholarshipApplicationMail($application));
+        try {
+            Mail::to('info@alpaslanotizmvakfi.org')->send(new ScholarshipApplicationMail($application));
+        } catch (\Throwable $e) {
+            \Log::error("Burs başvurusu #{$application->id} vakıf bildirimi gönderilemedi: " . $e->getMessage());
+        }
 
         if ($application->guardian_email) {
-            Mail::to($application->guardian_email)->send(new ScholarshipApplicationConfirmationMail($application));
+            try {
+                Mail::to($application->guardian_email)->send(new ScholarshipApplicationConfirmationMail($application));
+            } catch (\Throwable $e) {
+                \Log::error("Burs başvurusu #{$application->id} onay maili gönderilemedi: " . $e->getMessage());
+            }
         }
     }
 }
